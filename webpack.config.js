@@ -18,7 +18,7 @@ module.exports = {
                 type: 'asset/resource',
             },
             {
-                test: /\.(woff|woff2|ttf|eog)$/i,
+                test: /\.(woff|woff2|ttf|eog|otf)$/i,
                 type: 'asset/resource',
             }
         ]
