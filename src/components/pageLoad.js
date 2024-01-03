@@ -1,5 +1,7 @@
 import header from './header.js';
 
-export default initPage = () => {
-    
+const initPage = () => {
+    header();
 }
+
+export default initPage;

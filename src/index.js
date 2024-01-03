@@ -1,1 +1,3 @@
-console.log('It worked');
+import pageLoader from './components/pageLoad.js';
+
+pageLoader();
