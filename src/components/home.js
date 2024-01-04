@@ -1,6 +1,9 @@
 const initHome = () => {
     const main = document.querySelector('main');
-    const content = document.querySelector('.content');
+
+    // Create home page (landing, about,feedback, gallery)
+    const homePage = document.createElement('div');
+    homePage.setAttribute('id', 'home');
 
     // Create "Landing Page"
     const landingPage = document.createElement('div');
@@ -96,8 +99,9 @@ const initHome = () => {
     `;
     galleryPage.append(galleryTitle, galleryContent);
 
-    main.append(landingPage, aboutPage, feedbackPage, galleryPage);
-    content.append(main);
+    // Input the home page elements into main
+    homePage.append(landingPage, aboutPage, feedbackPage, galleryPage);
+    main.append(homePage);
 };
 
 export default initHome;
