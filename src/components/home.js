@@ -13,7 +13,7 @@ const initHome = () => {
             <p>Experience a burst of flavor at Jelly Sushi, where innovation meets tradition. Our menu is a delightful journey through the art of sushi creation.</p>
 
             <p>Order Now for Jellylicious Sushi</p>
-            <button class="order-btn"><a href="#menu">Order Now</a></button>
+            <a href="#menu" class="order-btn">Order Now</a>
 
             <p>Treat yourself to the extraordinary - order now and relish the delightful world of Jelly Sushi!</p>
         </div>
