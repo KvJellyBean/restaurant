@@ -1,5 +1,4 @@
 const initHeader = () => {
-    const content = document.querySelector('.content');
     const headerTag = document.querySelector('header');
 
     // Make the logo 
@@ -24,8 +23,6 @@ const initHeader = () => {
 
     // Input the logo and nav into header
     headerTag.append(logoContainer, navbar);
-    // Add the header into content page
-    content.append(headerTag);
 };
 
 export default initHeader;  
