@@ -1,6 +1,6 @@
 const initHeader = () => {
     const content = document.querySelector('.content');
-    const headerTag = document.createElement('header');
+    const headerTag = document.querySelector('header');
 
     // Make the logo 
     const logoContainer = document.createElement('div');
@@ -11,6 +11,7 @@ const initHeader = () => {
     logoContainer.classList.add('logo-container');
     logoContainer.append(logoImage, logoTitle);
 
+    // Make navbar
     const navbar = document.createElement('nav');
     const unorderList = document.createElement('ul');
     unorderList.innerHTML = `
@@ -20,11 +21,10 @@ const initHeader = () => {
     `;
     navbar.append(unorderList);
 
-
     // Input the logo and nav into header
     headerTag.append(logoContainer, navbar);
     // Add the header into content page
     content.append(headerTag);
-}
+};
 
 export default initHeader;  
