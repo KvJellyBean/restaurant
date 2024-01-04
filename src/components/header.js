@@ -8,6 +8,7 @@ const initHeader = () => {
     logoTitle.innerText = 'Jelly Sushi';
     const logoImage = document.createElement('img');
     logoImage.setAttribute('src', '../src/images/logo.png');
+    logoImage.setAttribute('alt', 'Logo');
     logoContainer.classList.add('logo-container');
     logoContainer.append(logoImage, logoTitle);
 
