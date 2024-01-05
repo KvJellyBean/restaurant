@@ -15,9 +15,9 @@ pageLoader();
 
 // Event listeners for tab switching 
 const tabSwitchController = (() => {
-    const home = document.querySelector('ul li:nth-child(1) a');
-    const menu = document.querySelector('ul li:nth-child(2) a');
-    const contact = document.querySelector('ul li:nth-child(3) a');
+    const home = document.querySelector('ul li:nth-child(1) button');
+    const menu = document.querySelector('ul li:nth-child(2) button');
+    const contact = document.querySelector('ul li:nth-child(3) button');
 
     home.addEventListener('click', () => {
         clearContent();

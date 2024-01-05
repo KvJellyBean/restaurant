@@ -28,9 +28,9 @@ const createNavbar = () => {
     const navbar = document.createElement('nav');
     const unorderList = document.createElement('ul');
     unorderList.innerHTML = `
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><button>Home</button></li>
+        <li><button>Menu</button></li>
+        <li><button>Contact</button></li>
     `;
     navbar.append(unorderList);
     return navbar;
