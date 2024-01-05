@@ -1,17 +1,30 @@
 const initHeader = () => {
     const headerTag = document.querySelector('header');
 
-    // Make the logo 
-    const logoContainer = document.createElement('div');
+    // Create the logo 
+    const logo = createLogo();
+    // Create the navbar
+    const navbar = createNavbar();
+
+    // Input the logo and nav into header
+    headerTag.append(logo, navbar);
+};
+
+// Function to make/generate the logo 
+const createLogo = () => {
+    const container = document.createElement('div');
+    container.classList.add('logo-container');
     const logoTitle = document.createElement('h1');
     logoTitle.innerText = 'Jelly Sushi';
     const logoImage = document.createElement('img');
     logoImage.setAttribute('src', '../src/images/logo.png');
     logoImage.setAttribute('alt', 'Logo');
-    logoContainer.classList.add('logo-container');
-    logoContainer.append(logoImage, logoTitle);
+    container.append(logoImage, logoTitle);
+    return container;
+};
 
-    // Make navbar
+// Function to create the navbar
+const createNavbar = () => {
     const navbar = document.createElement('nav');
     const unorderList = document.createElement('ul');
     unorderList.innerHTML = `
@@ -20,9 +33,8 @@ const initHeader = () => {
         <li><a href="#contact">Contact</a></li>
     `;
     navbar.append(unorderList);
-
-    // Input the logo and nav into header
-    headerTag.append(logoContainer, navbar);
+    return navbar;
 };
 
-export default initHeader;  
+export default initHeader;
+export { createLogo };
