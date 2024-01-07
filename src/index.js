@@ -21,16 +21,32 @@ const tabSwitchController = (() => {
 
     home.addEventListener('click', () => {
         clearContent();
+        if (!home.classList.contains('active')) {
+            home.classList.add('active');
+        }
+        home.classList.add('active');
+        menu.classList.remove('active');
+        contact.classList.remove('active');
         homePage();
     });
 
     menu.addEventListener('click', () => {
         clearContent();
+        if (!menu.classList.contains('active')) {
+            menu.classList.add('active');
+        }
+        home.classList.remove('active');
+        contact.classList.remove('active');
         menuPage();
     });
 
     contact.addEventListener('click', () => {
         clearContent();
+        if (!contact.classList.contains('active')) {
+            contact.classList.add('active');
+        }
+        home.classList.remove('active');
+        menu.classList.remove('active');
         contactPage();
     });
 

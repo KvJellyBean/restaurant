@@ -40,14 +40,20 @@ const initContact = () => {
         
         <form class="contactForm">
             <h3>Get in touch</h3>
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="formInput">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Your Message:</label>
-            <input type="text" id="message" name="message" required></input>
+            <div class="formInput">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="formInput">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
 
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
