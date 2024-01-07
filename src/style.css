@@ -108,22 +108,25 @@ li {
         cursor: pointer;
     }
 
-    :hover {
-        color: var(--accent-600);
-    }
+}
 
-    ::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        background-color: var(--accent);
-        display: block;
-        transition: .2s ease;
-    }
+button:hover,
+.active {
+    color: var(--accent-600);
+}
 
-    :hover::after {
-        width: 100%;
-    }
+button::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    display: block;
+    transition: .2s ease;
+}
+
+button:hover::after,
+.active::after {
+    width: 100%;
 }
 
 /* Main */
@@ -445,12 +448,158 @@ li {
 
 /* = Contect = */
 #contact {
-    /* min-height: 95dvh; */
+    min-height: 50dvh;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     padding: 8rem 10%;
     text-align: center;
+
+    .title {
+        text-shadow: 0 5px 10px var(--accent);
+    }
+
+    .contactDetail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .contactInfo {
+            flex: 1 1 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem 1rem;
+            border-radius: 1rem;
+            background: linear-gradient(to top, var(--accent) 10%, var(--text) 100%);
+            color: var(--text);
+            font-family: 'Roboto-M';
+
+            & h3 {
+                font-size: 1.5rem;
+                color: var(--secondary-200);
+                text-shadow: 0px -2px 20px var(--background);
+                text-transform: uppercase;
+            }
+
+            & h4 {
+                font-family: 'GangOfThree', sans-serif;
+                font-weight: 500;
+                font-size: 1.25rem;
+                color: var(--background);
+                text-shadow: 1px 2px 2px var(--text);
+                text-transform: capitalize;
+                font-style: italic;
+            }
+
+            & p,
+            tr {
+                font-size: 1.25rem;
+                color: var(--background);
+            }
+
+            .contactPerson {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                & h4 {
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .information {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                & th,
+                td {
+                    padding: .25rem 1rem;
+                }
+
+                & table tbody tr td:nth-child(1) {
+                    text-align: left;
+                }
+
+                & table tbody tr td:nth-child(2) {
+                    text-align: right;
+                }
+            }
+        }
+
+        .contactForm {
+            flex: 1 1 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding: 2rem;
+            text-align: left;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px var(--accent);
+
+            & h3 {
+                grid-column: 1/3;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-family: 'Roboto-M';
+                color: var(--primary-600);
+            }
+
+            .formInput {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+
+                & label {
+                    font-family: 'Roboto-M', sans-serif;
+                }
+
+                & input,
+                textarea {
+                    padding: .5rem;
+                    outline: none;
+                    border: 1px solid var(--accent);
+                    font-size: 1rem;
+                }
+
+                & textarea {
+                    height: 5rem;
+                }
+            }
+
+            .formInput:nth-child(4) {
+                grid-column: 1/3;
+            }
+
+            & button {
+                grid-column: 1/3;
+                padding: 1rem 3rem;
+                justify-self: end;
+
+                background-color: var(--accent);
+                color: var(--background);
+                border-radius: 2rem;
+                border: 2px solid var(--accent);
+                cursor: pointer;
+                transition: .3s ease;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            & button:hover {
+                background-color: var(--background);
+                color: var(--accent);
+                transform: .2s ease;
+                border: 2px solid var(--accent);
+                transition: .3s ease;
+            }
+        }
+    }
 }
 
 * {
