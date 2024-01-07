@@ -7,7 +7,7 @@ const initContact = () => {
 
     // Create the title
     const contactTitle = document.createElement('h2');
-    contactTitle.classList.add('contactTitle');
+    contactTitle.classList.add('title');
     contactTitle.innerText = 'Contact';
 
     // Create the contact details

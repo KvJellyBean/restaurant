@@ -73,7 +73,7 @@ const initMenu = () => {
     menuPage.setAttribute('id', 'menu');
 
     // Create the title
-    const menuTitle = createPageTitle('Our Exquisite Sushi Menu');
+    const menuTitle = createPageTitle('Our <span>Exquisite</span> Sushi Menu');
 
     // Create menu list
     const menuList = createMenuList(menus);
@@ -112,6 +112,7 @@ const createMenuList = (menu) => {
         const orderButton = document.createElement('a');
         orderButton.href = '#contact';
         orderButton.classList.add('order-btn');
+        orderButton.innerText = 'Order';
         menuDescription.append(menuName, description, price, orderButton);
 
         menuWrapper.append(menuImage, menuDescription);

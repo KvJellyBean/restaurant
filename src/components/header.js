@@ -15,7 +15,7 @@ const createLogo = () => {
     const container = document.createElement('div');
     container.classList.add('logo-container');
     const logoTitle = document.createElement('h1');
-    logoTitle.innerText = 'Jelly Sushi';
+    logoTitle.innerHTML = '<span>Jelly</span> Sushi';
     const logoImage = document.createElement('img');
     logoImage.setAttribute('src', '../src/images/logo.png');
     logoImage.setAttribute('alt', 'Logo');
