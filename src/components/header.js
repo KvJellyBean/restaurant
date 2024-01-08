@@ -17,13 +17,13 @@ const createLogo = () => {
     const logoTitle = document.createElement('h1');
     logoTitle.innerHTML = '<span>Jelly</span> Sushi';
     const logoImage = document.createElement('img');
-    logoImage.setAttribute('src', './images/logo.png');
     logoImage.setAttribute('alt', 'Logo');
+    logoImage.setAttribute('src', './images/logo.png');
     container.append(logoImage, logoTitle);
     return container;
 };
 
-// Function to create the navbar
+// Function to create the nav bar 
 const createNavbar = () => {
     const navbar = document.createElement('nav');
     const unorderList = document.createElement('ul');
