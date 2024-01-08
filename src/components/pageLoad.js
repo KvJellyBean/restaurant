@@ -1,7 +1,7 @@
 import header from './header.js';
 import home from './home.js';
 import footer from './footer.js';
-import '../style.css';
+import '../../dist/style.css';
 
 const initPage = () => {
     // Header
