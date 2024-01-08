@@ -45,9 +45,9 @@ const tabSwitchController = (() => {
 
     const clearContent = () => {
         mainTag.innerHTML = '';
-        home.classList.remove('active');
-        menu.classList.remove('active');
-        contact.classList.remove('active');
+        home.removeAttribute('class');
+        menu.removeAttribute('class');
+        contact.removeAttribute('class');
     }
 
     return {
