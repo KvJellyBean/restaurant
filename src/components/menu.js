@@ -1,4 +1,6 @@
 import { createSectionTitle as createPageTitle } from "./home";
+import contactPage from './contact.js';
+import { contact, clearContent } from '../index.js';
 
 // Data
 const menus = [
@@ -81,6 +83,16 @@ const initMenu = () => {
     // Input the menu page elements into main
     menuPage.append(menuTitle, menuList);
     main.append(menuPage);
+
+    // Listener for button order
+    const orderButtons = document.querySelectorAll('a.order-btn');
+    orderButtons.forEach(orderBtn => {
+        orderBtn.addEventListener('click', () => {
+            clearContent();
+            contactPage();
+            contact.classList.add('active');
+        });
+    })
 };
 
 // Function to create menu list

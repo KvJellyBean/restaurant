@@ -24,9 +24,6 @@ const tabSwitchController = (() => {
         if (!home.classList.contains('active')) {
             home.classList.add('active');
         }
-        home.classList.add('active');
-        menu.classList.remove('active');
-        contact.classList.remove('active');
         homePage();
     });
 
@@ -35,8 +32,6 @@ const tabSwitchController = (() => {
         if (!menu.classList.contains('active')) {
             menu.classList.add('active');
         }
-        home.classList.remove('active');
-        contact.classList.remove('active');
         menuPage();
     });
 
@@ -45,12 +40,27 @@ const tabSwitchController = (() => {
         if (!contact.classList.contains('active')) {
             contact.classList.add('active');
         }
-        home.classList.remove('active');
-        menu.classList.remove('active');
         contactPage();
     });
 
-    function clearContent() {
+    const clearContent = () => {
         mainTag.innerHTML = '';
+        home.classList.remove('active');
+        menu.classList.remove('active');
+        contact.classList.remove('active');
+    }
+
+    return {
+        clearContent,
+        home,
+        menu,
+        contact
     }
 })();
+
+// export
+const homeNav = tabSwitchController.home;
+const menuNav = tabSwitchController.menu;
+const contactNav = tabSwitchController.contact;
+const clearContent = tabSwitchController.clearContent;
+export { homeNav as home, menuNav as menu, contactNav as contact, clearContent };

@@ -1,3 +1,6 @@
+import menuPage from './menu.js';
+import { menu, clearContent } from '../index.js';
+
 const sections = [
     {
         id: 'landingPage',
@@ -83,6 +86,14 @@ const initHome = () => {
 
     // Input the home page elements into main
     main.append(homePage);
+
+    // Listener for button order
+    const orderNowBtn = document.querySelector('#landingPage .order-btn');
+    orderNowBtn.addEventListener('click', () => {
+        clearContent();
+        menuPage();
+        menu.classList.add('active');
+    });
 };
 
 // Function create element include id, class, and its content
