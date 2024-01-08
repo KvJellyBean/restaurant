@@ -838,6 +838,7 @@ footer {
 
     #home #landingPage {
         background-size: 300%;
+        padding-top: 8rem;
 
         .landingPageContent {
             gap: 1rem;
