@@ -145,10 +145,6 @@ button:hover::after,
     }
 }
 
-* {
-    /* border: 1px solid red; */
-}
-
 /* == Landing Page == */
 #landingPage {
     position: relative;
