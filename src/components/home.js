@@ -11,7 +11,7 @@ const sections = [
             <a href="#menu" class="order-btn">Order Now</a>
         </div>
         <div class="right-side">
-            <img src="../dist/images/landing-sushi.png">
+            <img src="../../dist/images/landing-sushi.png">
         </div>
         `
     },
@@ -19,7 +19,7 @@ const sections = [
         id: 'about',
         content: `
         <div class="left-side">
-            <img src="../dist/images/about-sushi.png">
+            <img src="../../dist/images/about-sushi.png">
         </div>
         <div class="right-side">
             <h2>About Us</h2>
@@ -49,19 +49,19 @@ const sections = [
         id: 'gallery',
         content: `
         <div class="gallery-item">
-            <img src="../dist/images/gallery-1.jpeg" alt="Gallery Image 1">
+            <img src="../../dist/images/gallery-1.jpeg" alt="Gallery Image 1">
         </div>
         <div class="gallery-item">
-            <img src="../dist/images/gallery-2.jpeg" alt="Gallery Image 2">
+            <img src="../../dist/images/gallery-2.jpeg" alt="Gallery Image 2">
         </div>
         <div class="gallery-item">
-            <img src="../dist/images/gallery-3.jpeg" alt="Gallery Image 3">
+            <img src="../../dist/images/gallery-3.jpeg" alt="Gallery Image 3">
         </div>
         <div class="gallery-item">
-            <img src="../dist/images/gallery-4.jpeg" alt="Gallery Image 4">
+            <img src="../../dist/images/gallery-4.jpeg" alt="Gallery Image 4">
         </div>
         <div class="gallery-item">
-            <img src="../dist/images/gallery-5.jpeg" alt="Gallery Image 5">
+            <img src="../../dist/images/gallery-5.jpeg" alt="Gallery Image 5">
         </div>
         `
     }

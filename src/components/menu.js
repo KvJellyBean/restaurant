@@ -8,61 +8,61 @@ const menus = [
         name: 'Salmon Nigiri',
         description: 'Fresh salmon atop a bed of seasoned rice.',
         price: '$9.99',
-        imageUrl: '../dist/images/menu1.jpeg'
+        imageUrl: '../../dist/images/menu1.jpeg'
     },
     {
         name: 'Tuna Sashimi',
         description: 'Prime tuna served in delicate slices, perfect for savoring the pure taste of the fish.',
         price: '$30.00',
-        imageUrl: '../dist/images/menu2.jpeg'
+        imageUrl: '../../dist/images/menu2.jpeg'
     },
     {
         name: 'Yellowtail Sashimi',
         description: 'Slices of yellowtail, perfect for savoring the pure taste of the fish.',
         price: '$25.00',
-        imageUrl: '../dist/images/menu3.jpeg'
+        imageUrl: '../../dist/images/menu3.jpeg'
     },
     {
         name: 'Octopus Sashimi',
         description: 'Tender octopus slices, served raw for a unique seafood experience.',
         price: '$25.00',
-        imageUrl: '../dist/images/menu4.jpeg'
+        imageUrl: '../../dist/images/menu4.jpeg'
     },
     {
         name: 'Spicy Tuna Roll',
         description: 'Seaweed-wrapped sushi filled with tuna, spicy mayo, avocado, and cucumber.',
         price: '$13.99',
-        imageUrl: '../dist/images/menu5.jpeg'
+        imageUrl: '../../dist/images/menu5.jpeg'
     },
     {
         name: 'Vegetarian Temaki',
         description: 'A delightful hand roll featuring fresh vegetables and sushi rice.',
         price: '$8.99',
-        imageUrl: '../dist/images/menu6.jpeg'
+        imageUrl: '../../dist/images/menu6.jpeg'
     },
     {
         name: 'California Roll',
         description: 'Avocado, crab, and cucumber rolled in seaweed and rice, topped with tobiko.',
         price: '$13.99',
-        imageUrl: '../dist/images/menu7.jpeg'
+        imageUrl: '../../dist/images/menu7.jpeg'
     },
     {
         name: 'Dragon Roll',
         description: 'Eel, avocado, and cucumber wrapped in seaweed and rice, topped with avocado slices and eel sauce.',
         price: '$17.99',
-        imageUrl: '../dist/images/menu8.jpeg'
+        imageUrl: '../../dist/images/menu8.jpeg'
     },
     {
         name: 'Shrimp Tempura Uramaki',
         description: 'Inside-out roll with shrimp tempura, avocado, and cucumber, topped with eel sauce.',
         price: '$15.00',
-        imageUrl: '../dist/images/menu9.jpeg'
+        imageUrl: '../../dist/images/menu9.jpeg'
     },
     {
         name: 'Spider Roll',
         description: 'Soft-shell crab, avocado, and cucumber rolled in seaweed and rice, served with spicy mayo.',
         price: '$12.99',
-        imageUrl: '../dist/images/menu10.jpeg'
+        imageUrl: '../../dist/images/menu10.jpeg'
     },
 ]
 
