@@ -273,7 +273,7 @@ button:hover::after,
     flex-direction: column;
     gap: 5rem;
     position: relative;
-    background: url(../dist/src/images/restaurant.jpg);
+    background: url(../dist/images/restaurant.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     object-fit: cover;
