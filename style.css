@@ -31,6 +31,18 @@
     --primary-600: #b0281c;
     --secondary-200: #f0aea8;
     --accent-600: #be1d0e;
+
+    --background-50: #f9eeec;
+    --background-100: #f2ded9;
+    --background-200: #e6bdb3;
+    --background-300: #d99c8c;
+    --background-400: #cc7a66;
+    --background-500: #bf5940;
+    --background-600: #994733;
+    --background-700: #733626;
+    --background-800: #4d2419;
+    --background-900: #26120d;
+    --background-950: #130906;
 }
 
 /* Reset */
@@ -148,7 +160,7 @@ button:hover::after,
 /* == Landing Page == */
 #landingPage {
     position: relative;
-    background: url(../dist/images/landingbg.jpeg);
+    /* background: url(../dist/images/landingbg.jpeg); 
     background-repeat: no-repeat;
     object-fit: cover;
     background-position: bottom center;
@@ -163,7 +175,7 @@ button:hover::after,
         height: 100%;
         background-color: rgba(250, 242, 240, 0.6);
         backdrop-filter: blur(.5rem);
-    }
+    } */
 
     .landingPageContent {
         position: relative;
@@ -172,6 +184,18 @@ button:hover::after,
         align-items: center;
         flex-wrap: wrap;
         gap: 1.5rem;
+
+        .bamboo {
+            position: absolute;
+            opacity: .4;
+            z-index: -5;
+            transform: scaleX(-1);
+            rotate: -26deg;
+            height: 100dvh;
+            right: -25rem;
+            top: -2rem;
+            filter: brightness(0.9) invert(.6) sepia(.7) hue-rotate(310deg) saturate(250%);
+        }
 
         .left-side {
             flex: 1 1 18rem;
@@ -219,12 +243,14 @@ button:hover::after,
     justify-content: center;
     align-items: center;
     padding: 5rem 15%;
+    z-index: 2;
 
     .aboutContent {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 2rem;
+
 
         .left-side {
             flex: 1 1 15rem;
@@ -233,7 +259,17 @@ button:hover::after,
             align-items: center;
             position: relative;
 
-            & img {
+            .brush {
+                position: absolute;
+                z-index: -5;
+                left: 1%;
+                top: 4.5%;
+                height: 100%;
+                width: 100%;
+                opacity: .8;
+            }
+
+            & img:not(.brush) {
                 width: 100%;
                 filter: drop-shadow(5px 5px 10px var(--accent));
                 animation: float 5s forwards infinite;
@@ -252,6 +288,7 @@ button:hover::after,
                 font-weight: 500;
                 color: var(--primary);
                 font-size: 1.5rem;
+                -webkit-text-stroke: 1px var(--secondary);
             }
 
             & h3 {
@@ -273,7 +310,7 @@ button:hover::after,
     flex-direction: column;
     gap: 5rem;
     position: relative;
-    background: url(../dist/images/restaurant.jpg);
+    /* background: url(../dist/images/restaurant.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     object-fit: cover;
@@ -288,10 +325,10 @@ button:hover::after,
         height: 101%;
         background-color: rgba(3, 3, 3, 0.6);
         backdrop-filter: blur(.5rem);
-    }
+    } */
 
     .title {
-        text-shadow: -1px -1px 0 var(--background), 1px -1px 0 var(--background), -1px 1px 0 var(--background), 1px 1px 0 var(--background);
+        z-index: 2;
     }
 
     .feedbackContent {
@@ -301,15 +338,36 @@ button:hover::after,
         flex-wrap: wrap;
         gap: 5rem;
 
+        .sakura {
+            position: absolute;
+            z-index: -5;
+            opacity: .5;
+            filter: brightness(0.6) invert(.1) sepia(.9) hue-rotate(315deg) saturate(250%);
+        }
+
+        .sakura:nth-child(1) {
+            transform: scaleX(-1.5);
+            top: -85%;
+            right: -21%;
+        }
+
+        .sakura:nth-child(2) {
+            transform: scaleY(-1.5) scaleX(1.5);
+            top: 55%;
+            left: -23%;
+        }
+
         .testimonial {
+            z-index: 2;
             flex: 1 1 20%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             padding: 3rem;
             border-radius: 5rem;
-            box-shadow: 0 0px 50px var(--background);
-            color: var(--background);
+            box-shadow: 0 0px 50px var(--accent);
+            color: var(--accent-600);
+            background-color: var(--background-100);
 
             & p:nth-child(1) {
                 font-weight: 'Roboto M';
@@ -321,7 +379,7 @@ button:hover::after,
                 font-weight: 'Roboto M';
                 font-size: 1.5rem;
                 font-weight: bold;
-                color: var(--secondary-200);
+                color: var(--primary-600);
             }
         }
 
@@ -342,49 +400,44 @@ button:hover::after,
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    padding: 5rem 15%;
-    background-color: var(--text);
+    padding: 7rem;
+    position: relative;
 
     .title {
-        text-shadow: -1px -1px 0 var(--background), 1px -1px 0 var(--background), -1px 1px 0 var(--background), 1px 1px 0 var(--background);
+        z-index: 5;
     }
 
     .galleryContent {
         display: flex;
         flex-wrap: wrap;
-        gap: .5rem;
+        gap: 1rem;
         padding: .5rem;
         width: 100%;
 
         .gallery-item {
             display: grid;
             place-items: center;
-            position: relative;
-            height: fit-content;
+            border: .5rem solid white;
+            border-bottom: 4rem solid white;
+            box-shadow: 0 5px 20px var(--text);
+            overflow: hidden;
 
             & img {
-                border: .8rem solid var(--background);
-                border-radius: 50%;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
-                filter: drop-shadow(0 5px 20px var(--accent));
+            }
+
+            & img:hover {
+                scale: 1.1;
+                transition: .5s ease;
             }
         }
 
         :nth-child(n) {
             flex: 1 1 1rem;
-            transition: .5s ease;
             cursor: pointer;
             transition: .5s ease;
-        }
-
-        :nth-child(n):hover {
-            flex: 1 1 3rem;
-            transition: .5s ease;
-
-            & img {
-                border-radius: 1rem;
-            }
         }
     }
 }
@@ -400,26 +453,7 @@ button:hover::after,
 
     .title {
         text-shadow: 0 5px 10px var(--secondary);
-        padding: 4rem 0rem;
         -webkit-text-stroke: 2px var(--background);
-        background: url(../dist/images/menus1.jpg);
-        background-attachment: fixed;
-        background-size: 100%;
-        background-position: center;
-        position: relative;
-        border-radius: 2rem;
-        text-align: center;
-
-        & ::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 51, 0, 0.2);
-            border-radius: 2rem;
-        }
     }
 
     .menuList {
@@ -714,6 +748,7 @@ button:hover::after,
     text-align: center;
     color: var(--primary);
     position: relative;
+    -webkit-text-stroke: 2px var(--text);
 }
 
 /* Footer */
@@ -802,12 +837,32 @@ footer {
         }
     }
 
+    #feedback {
+        .feedbackContent {
+            .sakura:nth-child(1) {
+                transform: scaleX(-1);
+                top: -49%;
+                right: -38%;
+            }
+
+            .sakura:nth-child(2) {
+                transform: scaleY(-1) scaleX(1);
+                top: 80%;
+                left: -38%;
+            }
+        }
+    }
+
     #gallery {
         gap: 4rem;
 
         .galleryContent {
             flex-direction: column;
             gap: 1.5rem;
+
+            .gallery-item {
+                overflow: visible;
+            }
         }
     }
 }
@@ -867,6 +922,12 @@ footer {
         padding: 2.5rem 15% 7.5rem;
 
         .aboutContent {
+            .left-side {
+                .brush {
+                    top: 9.5%;
+                }
+            }
+
             .right-side {
                 width: 100%;
                 align-items: center;
@@ -879,6 +940,18 @@ footer {
         gap: 2.5rem;
 
         .feedbackContent {
+            .sakura:nth-child(1) {
+                transform: scaleX(-1);
+                top: -29%;
+                right: -60%;
+            }
+
+            .sakura:nth-child(2) {
+                transform: scaleY(-1) scaleX(1);
+                top: 86%;
+                left: -56%;
+            }
+
             .testimonial {
                 gap: 1rem;
 
@@ -894,6 +967,8 @@ footer {
     }
 
     #gallery {
+        padding: 2rem;
+
         .galleryContent {
             flex-direction: column;
         }
