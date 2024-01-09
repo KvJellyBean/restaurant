@@ -553,6 +553,15 @@ button:hover::after,
                     color: var(--accent-600);
                 }
             }
+
+            .menu-desc:hover {
+                & p:nth-child(2) {
+                    background-color: rgba(219, 48, 34, .7);
+                    opacity: 1;
+                    font-size: 1.25rem;
+                    transition: .3s ease;
+                }
+            }
         }
     }
 }
