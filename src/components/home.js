@@ -8,7 +8,7 @@ const sections = [
         <div class="left-side">
             <h2>Jelly Sushi <span>Delights</span></h2>
             <p>Experience a burst of flavor at Jelly Sushi, where innovation meets tradition. Our menu is a delightful journey through the art of sushi creation.</p>
-            <a href="#menu" class="order-btn">Order Now</a>
+            <a href="#menu" class="order-btn">Check Menu</a>
         </div>
         <div class="right-side">
             <img src="./images/landing-sushi.png" alt="Sushi">
