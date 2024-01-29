@@ -11,17 +11,17 @@ const sections = [
             <a href="#menu" class="order-btn">Check Menu</a>
         </div>
         <div class="right-side">
-            <img src="./images/landing-sushi.png" alt="Sushi">
+            <img src="./images/landing-sushi.png" alt="Sushi on a plate image">
         </div>
-        <img src="./images/bamboo.png" alt="Bamboo" class="bamboo">
+        <img src="./images/bamboo.png" alt="Bamboo Image" class="bamboo">
         `
     },
     {
         id: 'about',
         content: `
         <div class="left-side">
-            <img src="./images/brush.png" alt="brush" class="brush">
-            <img src="./images/about-sushi.png">
+            <img src="./images/brush.png" alt="Brush Mark" class="brush">
+            <img src="./images/about-sushi.png" Alt="Sushi image">
         </div>
         <div class="right-side">
             <h2>About Us</h2>
@@ -33,8 +33,8 @@ const sections = [
     {
         id: 'feedback',
         content: `
-        <img src="./images/sakura.png" alt="sakura" class="sakura">
-        <img src="./images/sakura.png" alt="sakura" class="sakura">
+        <img src="./images/sakura.png" alt="Sakura image 1" class="sakura">
+        <img src="./images/sakura.png" alt="Sakura image 2" class="sakura">
 
         <div class="testimonial">
             <p>"Jelly Sushi delivers an exceptional sushi experience! The sushi is always fresh, and the ordering process is seamless. It's my go-to for a sushi fix at home!"</p>
